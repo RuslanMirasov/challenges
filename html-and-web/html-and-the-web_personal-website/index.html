@@ -10,24 +10,22 @@
     <header class="header">
       <h1>Ruslan Mirasov</h1>
       <nav class="nav">
-        <a href="#">Contact</a>
-        <a href="#">Biography</a>
+        <a href="#contact">Contact</a>
+        <a href="#biography">Biography</a>
       </nav>
     </header>
     <main>
-      <section class="hero">
-        <article>
-          <img
-            src="https://avatars.githubusercontent.com/u/126423989?v=4"
-            alt="my photo"
-          />
+      <!--Main section-->
+      <section id="biography">
+        <section>
+          <img src="./public/foto.jpg" alt="my photo" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. At
             repudiandae magnam porro ad, adipisci veritatis doloremque non aut
             maxime repellat nostrum. Ipsam veniam magni nulla cupiditate!
             Doloremque debitis ea iste.
           </p>
-        </article>
+        </section>
         <ul>
           <li>
             <h3>Some title</h3>
@@ -52,18 +50,80 @@
         </ul>
       </section>
 
-      <section class="contact">
+      <!--Contact section-->
+      <section id="contact">
         <ul>
-          <li><a href="tel:+49 000 000 00 00">+49 000 000 00 00</a></li>
-          <li><a href="mailto:info">+49 000 000 00 00</a></li>
+          <li><a href="tel:+499876543210">+49 (987) 654 32 10</a></li>
+          <li><a href="mailto:info@mirasov.dev">info@mirasov.dev</a></li>
         </ul>
       </section>
+
+      <!--Portfolio section-->
+      <section id="portgolio">
+        <ul>
+          <li>
+            <a href="https://github.com/RuslanMirasov" target="_blank">
+              <img src="./public/github.jpg" alt="github" />
+              <h2>GitHub</h2>
+            </a>
+          </li>
+          <li>
+            <a href="https://codepen.io/" target="_blank">
+              <img src="./public/codepen.jpg" alt="Codepen" />
+              <h2>Codepen</h2>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <img src="./public/linkedin.jpg" alt="LinkedIn" />
+              <h2>LinkedIn</h2>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!--About section-->
+      <section id="about">
+        <article>
+          <h2>About me</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+            incidunt atque porro distinctio cupiditate rerum quae corrupti
+            quaerat quas tempore voluptates perspiciatis pariatur nisi,
+            voluptatibus magni, harum eaque blanditiis illo?
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+            incidunt atque porro distinctio cupiditate rerum quae corrupti
+            quaerat quas tempore voluptates perspiciatis pariatur nisi,
+            voluptatibus magni, harum eaque blanditiis illo?
+          </p>
+        </article>
+        <article>
+          <h2>Work experience</h2>
+          <p>
+            <b>2014-2018</b>
+            <span>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+              incidunt atque porro distinctio cupiditate rerum quae corrupti
+              quaerat quas tempore voluptates perspiciatis pariatur nisi,
+              voluptatibus magni, harum eaque blanditiis illo?
+            </span>
+          </p>
+          <p>
+            <b>2018-2022</b>
+            <span>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+              incidunt atque porro distinctio cupiditate rerum quae corrupti
+              quaerat quas tempore voluptates perspiciatis pariatur nisi,
+              voluptatibus magni, harum eaque blanditiis illo?
+            </span>
+          </p>
+        </article>
+      </section>
     </main>
-    <footer class="footer">
-      <img
-        src="https://cdn.pixabay.com/photo/2017/03/16/21/18/logo-2150297_640.png"
-        alt="logo"
-      />
+    <footer>
+      <img src="./public/logo.svg" alt="logo" />
       <p>&copy;Copyright 2024</p>
     </footer>
   </body>
