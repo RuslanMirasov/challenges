@@ -35,30 +35,52 @@ main {
  * .box--top-left -> This element should be be placed in the top, left corner.
 */
 
+.box {
+  position: absolute;
+}
+
 .box--top-left {
   background-color: #aed6f1;
+  left: 0;
+  top: 0;
 }
 
 .box--top-center {
   background-color: #85c1e9;
+  top: 0;
+  left: 50%;
+  margin-left: -40px;
 }
 
 .box--top-right {
   background-color: #5dade2;
+  top: 0px;
+  right: 0px;
 }
 
 .box--center {
   background-color: #3498db;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -40px;
 }
 
 .box--bottom-left {
   background-color: #2874a6;
+  bottom: 0;
+  left: 0;
 }
 
 .box--bottom-center {
   background-color: #21618c;
+  bottom: 0;
+  left: 50%;
+  margin-left: -40px;
 }
 
 .box--bottom-right {
   background-color: #1b4f72;
+  right: 0;
+  bottom: 0;
 }
