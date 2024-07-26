@@ -61,7 +61,7 @@ a {
 }
 
 /* 3. These styles should apply to all external links (you can use the attribute selector) */
-[target] {
+a[href^="http"] {
   color: #ff8000;
 }
 
