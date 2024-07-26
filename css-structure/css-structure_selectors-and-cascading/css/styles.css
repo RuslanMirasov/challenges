@@ -82,7 +82,8 @@ footer a {
 }
 
 /* 7. These styles should apply to all paragraphs and all lists (please use a class selector) */
-.list .text {
+.list,
+.text {
   color: #2c3f3f;
 }
 
