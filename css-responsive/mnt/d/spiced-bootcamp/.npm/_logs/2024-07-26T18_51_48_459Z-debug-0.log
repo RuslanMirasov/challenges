@@ -1,0 +1,15 @@
+0 verbose cli /home/mirasovdev/.nvm/versions/node/v20.15.1/bin/node /home/mirasovdev/.nvm/versions/node/v20.15.1/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@10.7.0
+2 info using node@v20.15.1
+3 silly config:load:file:/home/mirasovdev/.nvm/versions/node/v20.15.1/lib/node_modules/npm/npmrc
+4 silly config:load:file:/mnt/d/spiced-bootcamp/challenges/css-responsive/.npmrc
+5 silly config:load:file:/mnt/d/spiced-bootcamp/challenges/css-responsive/mnt/d/spiced-bootcamp/.npmrc
+6 silly config:load:file:/home/mirasovdev/.nvm/versions/node/v20.15.1/etc/npmrc
+7 verbose title npm exec ghcd@latest spicedacademy/fs-web-exercises/tree/main/sessions/css-responsive/responsive-website
+8 verbose argv "exec" "--" "ghcd@latest" "spicedacademy/fs-web-exercises/tree/main/sessions/css-responsive/responsive-website"
+9 verbose logfile logs-max:10 dir:/mnt/d/spiced-bootcamp/challenges/css-responsive/mnt/d/spiced-bootcamp/.npm/_logs/2024-07-26T18_51_48_459Z-
+10 verbose logfile /mnt/d/spiced-bootcamp/challenges/css-responsive/mnt/d/spiced-bootcamp/.npm/_logs/2024-07-26T18_51_48_459Z-debug-0.log
+11 silly logfile done cleaning log files
+12 http fetch GET 200 https://registry.npmjs.org/ghcd 210ms (cache revalidated)
+13 verbose exit 0
+14 info ok
