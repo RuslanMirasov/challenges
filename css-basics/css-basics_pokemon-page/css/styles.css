@@ -60,10 +60,6 @@ section {
   border-left: 5px solid orange;
 }
 
-section * {
-  background-color: inherit;
-}
-
 .favourites {
   border-left: 5px solid gold;
 }
@@ -82,7 +78,7 @@ section * {
   display: inline-block;
   border-left: 3px solid gold;
   border-right: 3px solid gold;
-  padding: 10px;
+  padding: 0px 10px;
 }
 
 .favourites .subtitle {
