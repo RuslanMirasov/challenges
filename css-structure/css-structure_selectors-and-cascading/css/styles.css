@@ -49,7 +49,7 @@ nav li {
 /* -------------------------------------------------------- */
 
 /* 1. These styles should apply to the headline */
-header {
+h1 {
   font-size: 2rem;
   margin: 0;
   color: #2673bb;
