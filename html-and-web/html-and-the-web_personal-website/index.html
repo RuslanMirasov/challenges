@@ -4,19 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Personal Website</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header class="header">
-      <h1>Ruslan Mirasov</h1>
-      <nav class="nav">
-        <a href="#contact">Contact</a>
-        <a href="#biography">Biography</a>
-      </nav>
+      <div class="container">
+        <div class="logo">
+          <h1 class="logo__icon">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/001/199/435/original/rainbow-logo-design-png.png"
+              alt="logo"
+            />
+          </h1>
+          <h1 class="logo__title">Name Sername</h1>
+        </div>
+
+        <nav class="navigation">
+          <menu class="navigation__menu">
+            <li class="navigation__menu-item">
+              <a href="#contact" class="hover-effect">Contacts</a>
+            </li>
+            <li class="navigation__menu-item">
+              <a href="#hero" class="hover-effect">Biography</a>
+            </li>
+            <li class="navigation__menu-item">
+              <a href="#about" class="hover-effect">About</a>
+            </li>
+          </menu>
+        </nav>
+        <button type="button" class="hamburger"><span>Menu</span></button>
+      </div>
     </header>
     <main>
       <!--Main section-->
-      <section id="biography">
+      <section id="hero">
         <section>
           <img src="./public/foto.jpg" alt="my photo" />
           <p>
@@ -123,7 +146,16 @@
       </section>
     </main>
     <footer>
-      <img src="./public/logo.svg" alt="logo" />
+      <div class="logo">
+        <h1 class="logo__icon">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/001/199/435/original/rainbow-logo-design-png.png"
+            alt="logo"
+          />
+        </h1>
+        <h1 class="logo__title">Name Sername</h1>
+      </div>
+      <a href="#" class="hover-effect">Privacy Policy</a>
       <p>&copy;Copyright 2024</p>
     </footer>
   </body>
