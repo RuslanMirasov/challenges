@@ -30,12 +30,16 @@ body {
   color: var(--white);
 }
 
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
 .profile__image {
-  display: block;
-  margin: 0 auto;
   border-radius: 50%;
   max-width: 50%;
   height: auto;
+  align-self: center;
 }
 
 .tech-stack__list {
