@@ -4,19 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Personal Website</title>
   </head>
-  <body>
+  <body class="body">
+    <!-- HEADER -->
     <header class="header">
-      <h1>Ruslan Mirasov</h1>
-      <nav class="nav">
-        <a href="#contact">Contact</a>
-        <a href="#biography">Biography</a>
-      </nav>
+      <div class="container">
+        <!-- Logo -->
+        <a href="#hero" class="logo js-scrollto">
+          <div class="logo__icon">
+            <img src="https://placehold.co/40x40" alt="logo" />
+          </div>
+          <strong class="logo__title">
+            Your Name <br /><span>Full-stack Developer</span>
+          </strong>
+        </a>
+
+        <nav class="navigation js-navigation">
+          <!-- Navigation menu -->
+          <menu class="navigation__menu">
+            <li class="navigation__menu-item">
+              <a href="#hero" class="js-scrollto hover-effect">Home</a>
+            </li>
+            <li class="navigation__menu-item">
+              <a href="#hero" class="js-scrollto hover-effect">Portfolio</a>
+            </li>
+            <li class="navigation__menu-item">
+              <a href="#about" class="js-scrollto hover-effect">About me</a>
+            </li>
+            <li class="navigation__menu-item">
+              <a href="#contact" class="js-scrollto hover-effect">Contacts</a>
+            </li>
+          </menu>
+
+          <!-- socials -->
+          <ul class="socials">
+            <li class="socials__item">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a href="https://www.linkedin.com/" target="_blank"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Theme switcher -->
+        <label class="theme-switcher js-theme-switcher">
+          <input type="checkbox" name="theme-switcher" />
+        </label>
+
+        <!-- Burger button -->
+        <button type="button" class="burger js-burger">
+          <span>Menu</span>
+        </button>
+      </div>
     </header>
-    <main>
+    <main class="main">
       <!--Main section-->
-      <section id="biography">
+      <section id="hero">
         <section>
           <img src="./public/foto.jpg" alt="my photo" />
           <p>
@@ -122,9 +177,26 @@
         </article>
       </section>
     </main>
+
     <footer>
-      <img src="./public/logo.svg" alt="logo" />
-      <p>&copy;Copyright 2024</p>
+      <div class="container">
+        <a href="#hero" class="logo js-scrollto">
+          <div class="logo__icon">
+            <img src="https://placehold.co/40x40" alt="logo" />
+          </div>
+          <strong class="logo__title">
+            Your Name <br /><span>Full-stack Developer</span>
+          </strong>
+        </a>
+        <a href="./policy" class="hover-effect">Privacy Policy</a>
+        <p>&copy;Copyright 2024</p>
+      </div>
     </footer>
+
+    <script
+      src="https://kit.fontawesome.com/ea42877e43.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/scripts.js" type="module"></script>
   </body>
 </html>

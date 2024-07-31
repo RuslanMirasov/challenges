@@ -1,0 +1,103 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul,
+menu {
+  list-style: none;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.fit-auto {
+  object-fit: contain;
+}
+
+.hover-effect {
+  position: relative;
+}
+
+.hover-effect:before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  left: auto;
+  bottom: 0px;
+  width: 0%;
+  height: 2px;
+  background: var(--color);
+  transition: 0.3s;
+}
+
+.hover-effect:hover:before {
+  left: 0px;
+  right: auto;
+  width: 100%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.preloader .preloader__spinner {
+  animation: spin 2s infinite linear;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--background);
+}
+
+.main {
+  padding-top: 80px;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  padding: 0px 20px;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1160px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0px 30px;
+  }
+}
