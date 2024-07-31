@@ -21,6 +21,10 @@ body {
   gap: 1rem;
   padding: 1rem;
   /* Add styles here */
+  grid-template-areas:
+    "a b c "
+    "d b f "
+    "d e f ";
 }
 
 .image-board__image {
@@ -32,25 +36,25 @@ body {
 }
 
 .image-board__image--1 {
-  /* Add styles here */
+  grid-area: a;
 }
 
 .image-board__image--2 {
-  /* Add styles here */
+  grid-area: b;
 }
 
 .image-board__image--3 {
-  /* Add styles here */
+  grid-area: c;
 }
 
 .image-board__image--4 {
-  /* Add styles here */
+  grid-area: d;
 }
 
 .image-board__image--5 {
-  /* Add styles here */
+  grid-area: e;
 }
 
 .image-board__image--6 {
-  /* Add styles here */
+  grid-area: f;
 }
