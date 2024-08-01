@@ -12,7 +12,7 @@ console.clear();
 // --v-- write your code here --v--
 const title = "My social accaunt";
 const text = "Some post text";
-const likes = 14;
+let likes = 14;
 const user = "Ruslan Mirasov";
 const isReported = true;
 // --^-- write your code here --^--
