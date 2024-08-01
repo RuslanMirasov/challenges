@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Personal Website</title>
+  </head>
+  <body class="body">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <!-- Logo -->
+        <a href="#hero" class="logo js-scrollto">
+          <div class="logo__icon">
+            <img src="https://placehold.co/40x40" alt="logo" />
+          </div>
+          <strong class="logo__title">
+            Your Name <br /><span>Full-stack Developer</span>
+          </strong>
+        </a>
+
+        <nav class="navigation js-navigation">
+          <!-- Navigation menu -->
+          <menu class="navigation__menu">
+            <li class="navigation__menu-item">
+              <a href="#hero" class="js-scrollto hover-effect">Home</a>
+            </li>
+            <li class="navigation__menu-item">
+              <a href="#hero" class="js-scrollto hover-effect">Portfolio</a>
+            </li>
+            <li class="navigation__menu-item">
+              <a href="#about" class="js-scrollto hover-effect">About me</a>
+            </li>
+            <li class="navigation__menu-item">
+              <a href="#contact" class="js-scrollto hover-effect">Contacts</a>
+            </li>
+          </menu>
+
+          <!-- socials -->
+          <ul class="socials">
+            <li class="socials__item">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a href="https://www.linkedin.com/" target="_blank"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Theme switcher -->
+        <label class="theme-switcher js-theme-switcher">
+          <input type="checkbox" name="theme-switcher" />
+        </label>
+
+        <!-- Burger button -->
+        <button type="button" class="burger js-burger">
+          <span>Menu</span>
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <!--Main section-->
+      <section id="hero">
+        <section>
+          <img src="./public/foto.jpg" alt="my photo" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+            repudiandae magnam porro ad, adipisci veritatis doloremque non aut
+            maxime repellat nostrum. Ipsam veniam magni nulla cupiditate!
+            Doloremque debitis ea iste.
+          </p>
+        </section>
+        <ul>
+          <li>
+            <h3>Some title</h3>
+            <ul>
+              <li>Some text 1</li>
+              <li>Some text 2</li>
+              <li>Some text 3</li>
+              <li>Some text 4</li>
+              <li>Some text 5</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Some title</h3>
+            <ul>
+              <li>Some text 1</li>
+              <li>Some text 2</li>
+              <li>Some text 3</li>
+              <li>Some text 4</li>
+              <li>Some text 5</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!--Contact section-->
+      <section id="contact">
+        <ul>
+          <li><a href="tel:+499876543210">+49 (987) 654 32 10</a></li>
+          <li><a href="mailto:info@mirasov.dev">info@mirasov.dev</a></li>
+        </ul>
+      </section>
+
+      <!--Portfolio section-->
+      <section id="portgolio">
+        <ul>
+          <li>
+            <a href="https://github.com/RuslanMirasov" target="_blank">
+              <img src="./public/github.jpg" alt="github" />
+              <h2>GitHub</h2>
+            </a>
+          </li>
+          <li>
+            <a href="https://codepen.io/" target="_blank">
+              <img src="./public/codepen.jpg" alt="Codepen" />
+              <h2>Codepen</h2>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <img src="./public/linkedin.jpg" alt="LinkedIn" />
+              <h2>LinkedIn</h2>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!--About section-->
+      <section id="about">
+        <article>
+          <h2>About me</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+            incidunt atque porro distinctio cupiditate rerum quae corrupti
+            quaerat quas tempore voluptates perspiciatis pariatur nisi,
+            voluptatibus magni, harum eaque blanditiis illo?
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+            incidunt atque porro distinctio cupiditate rerum quae corrupti
+            quaerat quas tempore voluptates perspiciatis pariatur nisi,
+            voluptatibus magni, harum eaque blanditiis illo?
+          </p>
+        </article>
+        <article>
+          <h2>Work experience</h2>
+          <p>
+            <b>2014-2018</b>
+            <span>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+              incidunt atque porro distinctio cupiditate rerum quae corrupti
+              quaerat quas tempore voluptates perspiciatis pariatur nisi,
+              voluptatibus magni, harum eaque blanditiis illo?
+            </span>
+          </p>
+          <p>
+            <b>2018-2022</b>
+            <span>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+              incidunt atque porro distinctio cupiditate rerum quae corrupti
+              quaerat quas tempore voluptates perspiciatis pariatur nisi,
+              voluptatibus magni, harum eaque blanditiis illo?
+            </span>
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <a href="#hero" class="logo js-scrollto">
+          <div class="logo__icon">
+            <img src="https://placehold.co/40x40" alt="logo" />
+          </div>
+          <strong class="logo__title">
+            Your Name <br /><span>Full-stack Developer</span>
+          </strong>
+        </a>
+        <a href="./policy" class="hover-effect">Privacy Policy</a>
+        <p>&copy;Copyright 2024</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/ea42877e43.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/scripts.js" type="module"></script>
+  </body>
+</html>
