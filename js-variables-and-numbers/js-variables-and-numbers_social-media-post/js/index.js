@@ -27,4 +27,7 @@ console.log("Text: ", text);
 console.log("Likes: ", likes);
 console.log("User: ", user);
 console.log("Is reported: ", isReported);
+
+likes++;
+console.log("Likes: ", likes);
 // --^-- write your code here --^--
