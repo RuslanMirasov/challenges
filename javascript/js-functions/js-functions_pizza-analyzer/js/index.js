@@ -41,7 +41,7 @@ function updatePizzaDisplay(pizzaElement, newSize) {
 // Task 3
 function updateOutputColor(size1, size2) {
   const gain = calculatePizzaGain(size1, size2);
-  if (gain > 0) {
+  if (gain >= 0) {
     outputSection.style.backgroundColor = "var(--green)";
   } else {
     outputSection.style.backgroundColor = "var(--red)";
