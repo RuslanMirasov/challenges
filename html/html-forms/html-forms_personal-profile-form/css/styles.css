@@ -50,9 +50,3 @@ select {
   color: var(--white);
   border-radius: 5px;
 }
-
-/* input[type="date"],
-input[type="text"],
-select {
-  width: 100%;
-} */
