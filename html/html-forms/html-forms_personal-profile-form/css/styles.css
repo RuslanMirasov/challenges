@@ -1,4 +1,4 @@
-@import './global.css';
+@import "./global.css";
 
 body {
   margin: 20px auto;
@@ -50,3 +50,9 @@ select {
   color: var(--white);
   border-radius: 5px;
 }
+
+/* input[type="date"],
+input[type="text"],
+select {
+  width: 100%;
+} */
