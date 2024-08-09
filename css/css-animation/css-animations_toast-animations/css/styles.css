@@ -21,6 +21,8 @@ body {
   border: none;
   font-size: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .start-button:hover {
@@ -28,6 +30,8 @@ body {
   color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .start-button:disabled {
@@ -38,6 +42,28 @@ body {
 }
 
 /* Toast */
+
+@keyframes toast-move-in {
+  0% {
+    transform: translate3d(-150%, 0, 0) rotate(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-move-out {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-150%, 0, 0) rotate(90deg);
+    opacity: 0;
+  }
+}
 
 .toast {
   position: absolute;
@@ -50,11 +76,11 @@ body {
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
-  transition: transform 0.5s;
+  animation: toast-move-in 1s forwards;
 }
 
 .toast--hidden {
-  transform: translate3d(-150%, 0, 0);
+  animation: toast-move-out 1s forwards;
 }
 
 /* Countdown */
