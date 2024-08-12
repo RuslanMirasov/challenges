@@ -21,7 +21,9 @@ select.name = "languages";
 main.append(select);
 
 // --v-- write/change code here --v--
-
+for (const key in languages) {
+  select.innerHTML += `<option value="${key}">${languages[key]}</option>`;
+}
 // --^-- write/change code here --^--
 
 // Part 2: Creating a Navigation Bar
@@ -38,5 +40,7 @@ main.append(navElement);
 navElement.append(ul);
 
 // --v-- write/change code here --v--
-
+for (const key in nav) {
+  ul.innerHTML += `<li><a href=".${nav[key].href}">${nav[key].text}</a></li>`;
+}
 // --^-- write/change code here --^--
