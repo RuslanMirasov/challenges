@@ -1,4 +1,4 @@
-import { cards } from "../../index.js";
+import { cards } from "../../data/cards.js";
 import Card from "../Card/Card.js";
 
 function handleFormSubmit(event) {
