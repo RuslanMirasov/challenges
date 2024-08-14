@@ -1,6 +1,6 @@
 import getRandomColor from "../../utils/randomColor.js";
 
-function Circle(className) {
+function Figure(className) {
   const circle = document.createElement("div");
   circle.classList.add(className);
   circle.addEventListener("click", () => {
@@ -9,4 +9,4 @@ function Circle(className) {
   return circle;
 }
 
-export default Circle;
+export default Figure;

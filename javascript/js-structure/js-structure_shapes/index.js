@@ -1,10 +1,10 @@
 console.clear();
 
-import Circle from "./components/Circle/Circle.js";
+import Figure from "./components/Figure/Figure.js";
 
 const root = document.getElementById("root");
-const circle = Circle("circle");
-const square = Circle("square");
-const pentagon = Circle("pentagon");
+const circle = Figure("circle");
+const square = Figure("square");
+const pentagon = Figure("pentagon");
 
 root.append(circle, square, pentagon);
