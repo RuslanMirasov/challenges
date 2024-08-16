@@ -71,15 +71,12 @@ spinButton.addEventListener("click", async () => {
       wheel2.spin(),
       wheel3.spin(),
     ]);
-    console.log("values", values);
+
     const winCounter = getMaxCount(values);
-    console.log("winCounter", winCounter);
     const points = winCounter === 3 ? 100 : winCounter === 2 ? 10 : 0;
-    console.log("points", points);
     result.setResult(points);
   } catch (error) {
     result.setMachineChoked();
-    console.log(error);
   } finally {
     spinButton.disabled = false;
   }
