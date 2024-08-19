@@ -33,7 +33,7 @@ function getRelocatedCity(city1, city2) {
   return relocatedCity;
 }
 
-var city1 = { name: "Mariupol", country: "Ukraine" };
-var city2 = { name: "Berlin", country: "Germany" };
+const city1 = { name: "Mariupol", country: "Ukraine" };
+const city2 = { name: "Berlin", country: "Germany" };
 
 console.log(getRelocatedCity(city1, city2));
