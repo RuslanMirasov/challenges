@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 375px;
+  height: auto;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 0 auto;
+}
