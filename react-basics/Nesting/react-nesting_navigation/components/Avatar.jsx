@@ -1,7 +1,7 @@
 import avatar from "../src/assets/avatar.jpg";
 import Image from "./Image";
 
-const Avatar = ({ children }) => {
+const Avatar = () => {
   return (
     <button
       type="button"
