@@ -1,6 +1,6 @@
 import "./App.css";
 
-const Button = ({ color, disabled, text, onClick }) => {
+const Button = ({ color = "blue", disabled, text, onClick }) => {
   return (
     <button
       style={{ backgroundColor: color }}
