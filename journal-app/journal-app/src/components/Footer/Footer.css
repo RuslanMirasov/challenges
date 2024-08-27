@@ -1,0 +1,20 @@
+.footer {
+  height: 56px;
+  background: var(--black);
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+}
+
+.footer__copyright {
+  color: var(--white);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  opacity: 0.8;
+}

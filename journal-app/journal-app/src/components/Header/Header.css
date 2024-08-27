@@ -1,0 +1,19 @@
+.header {
+  height: 54px;
+  background: var(--grey);
+}
+
+.header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  text-transform: uppercase;
+}
