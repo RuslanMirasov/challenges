@@ -10,6 +10,7 @@ const initialEntries = [
   {
     id: 1000,
     date: "Feb 5, 2025",
+    isFavorite: false,
     motto: "We are in a state of chaos",
     notes:
       "Today I learned about React State. It was fun! I can't wait to learn more.",
@@ -17,6 +18,7 @@ const initialEntries = [
   {
     id: 999,
     date: "Feb 4, 2025",
+    isFavorite: false,
     motto: "Props, Props, Props",
     notes:
       "Today I learned about React Props. Mad props to everyone who understands this!",
@@ -24,6 +26,7 @@ const initialEntries = [
   {
     id: 998,
     date: "Feb 3, 2025",
+    isFavorite: false,
     motto: "How to nest components online fast",
     notes:
       "Today I learned about React Components and how to nest them like a pro. Application design is so much fun!",
@@ -31,6 +34,7 @@ const initialEntries = [
   {
     id: 997,
     date: "Feb 2, 2025",
+    isFavorite: false,
     motto: "I'm a React Developer",
     notes: "My React-ion when I learned about React: Yay!",
   },
@@ -43,7 +47,20 @@ function App() {
     const date = new Date().toLocaleDateString("en-us", {
       dateStyle: "medium",
     });
-    setEntries([{ id: uid(), date, ...newEntry }, ...entries]);
+    setEntries([
+      { id: uid(), date, isFavorite: false, ...newEntry },
+      ...entries,
+    ]);
+  }
+
+  function handleToggleFavorite(id) {
+    const updatedEntries = entries.map((entry) => {
+      if (entry.id === id) {
+        return { ...entry, isFavorite: !entry.isFavorite };
+      }
+      return entry;
+    });
+    setEntries(updatedEntries);
   }
 
   return (
@@ -51,7 +68,10 @@ function App() {
       <Header />
       <main className="app__main">
         <EntryForm onAddEntry={handleAddEntry} />
-        <EntriesSection entries={entries} />
+        <EntriesSection
+          entries={entries}
+          onToggleFavorite={handleToggleFavorite}
+        />
       </main>
       <Footer />
     </div>
