@@ -4,7 +4,7 @@ export const volumes = [
     title: "The Fellowship of the Ring",
     description:
       "The Fellowship of the Ring is the first volume of J. R. R. Tolkien's epic adventure The Lord of the Rings. It is followed by The Two Towers and The Return of the King.",
-    cover: "/images/the-fellowship-of-the-ring.png",
+    cover: "/images/the-fellowship-of-the-ring.jpg",
     books: [
       {
         ordinal: "Book I",
@@ -22,7 +22,7 @@ export const volumes = [
     title: "The Two Towers",
     description:
       "The Two Towers is the second volume of J. R. R. Tolkien's epic adventure The Lord of the Rings. It is preceded by The Fellowship of the Ring and followed by The Return of the King.",
-    cover: "/images/the-two-towers.png",
+    cover: "/images/the-two-towers.jpg",
     books: [
       {
         ordinal: "Book III",
@@ -40,7 +40,7 @@ export const volumes = [
     title: "The Return of the King",
     description:
       "The Return of the King is the third and final volume of J. R. R. Tolkien's epic adventure The Lord of the Rings. It is preceded by The Fellowship of the Ring and The Two Towers.",
-    cover: "/images/the-return-of-the-king.png",
+    cover: "/images/the-return-of-the-king.jpg",
     books: [
       {
         ordinal: "Book V",
