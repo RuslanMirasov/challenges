@@ -8,10 +8,75 @@ jest.mock("next/router", () => ({
   },
 }));
 
-test("renders two input fields and a button", () => {});
+test("renders two input fields and a button", () => {
+  // Рендерим компонент GameForm
+  render(<GameForm onCreateGame={() => {}} />);
 
-test("renders a form with the accessible name 'Create a new game'", () => {});
+  // Проверяем наличие двух input-полей
+  const gameInput = screen.getByLabelText("Name of game");
+  const playerInput = screen.getByLabelText("Player names, separated by comma");
+  expect(gameInput).toBeInTheDocument();
+  expect(playerInput).toBeInTheDocument();
 
-test("submits the correct form data when every field is filled out", async () => {});
+  // Проверяем наличие кнопки
+  const createButton = screen.getByRole("button", { name: "Create game" });
+  expect(createButton).toBeInTheDocument();
+});
 
-test("does not submit form if one input field is left empty", async () => {});
+test("renders a form with the accessible name 'Create a new game'", () => {
+  // Рендерим компонент GameForm
+  render(<GameForm onCreateGame={() => {}} />);
+
+  // Проверяем наличие формы с правильным именем
+  const form = screen.getByRole("form", { name: "Create a new game" });
+  expect(form).toBeInTheDocument();
+});
+
+test("submits the correct form data when every field is filled out", async () => {
+  // Мокаем функцию onCreateGame
+  const onCreateGame = jest.fn();
+
+  // Рендерим компонент GameForm
+  render(<GameForm onCreateGame={onCreateGame} />);
+
+  // Ищем поля и кнопку
+  const gameInput = screen.getByLabelText("Name of game");
+  const playersInput = screen.getByLabelText(
+    "Player names, separated by comma"
+  );
+  const createButton = screen.getByRole("button", { name: "Create game" });
+
+  // Заполняем поля
+  await userEvent.type(gameInput, "Mortal Kombat");
+  await userEvent.type(playersInput, "Sub Zero, Scorpion");
+
+  // Кликаем на кнопку создания игры
+  await userEvent.click(createButton);
+
+  // Проверяем, что onCreateGame вызвана с правильными данными
+  expect(onCreateGame).toHaveBeenCalledWith({
+    nameOfGame: "Mortal Kombat",
+    playerNames: ["Sub Zero", "Scorpion"],
+  });
+});
+
+test("does not submit form if one input field is left empty", async () => {
+  // Мокаем функцию onCreateGame
+  const onCreateGame = jest.fn();
+
+  // Рендерим компонент GameForm
+  render(<GameForm onCreateGame={onCreateGame} />);
+
+  // Ищем поля и кнопку
+  const gameInput = screen.getByLabelText("Name of game");
+  const createButton = screen.getByRole("button", { name: "Create game" });
+
+  // Заполняем только одно поле
+  await userEvent.type(gameInput, "Mortal Kombat");
+
+  // Кликаем на кнопку создания игры
+  await userEvent.click(createButton);
+
+  // Проверяем, что onCreateGame не была вызвана
+  expect(onCreateGame).not.toHaveBeenCalled();
+});
