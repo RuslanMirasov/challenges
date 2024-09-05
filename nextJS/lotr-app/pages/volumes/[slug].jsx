@@ -1,14 +1,31 @@
-import { volumes } from "../../lib/data";
 import Link from "next/link";
 import Image from "next/image";
+import { volumes } from "../../lib/data";
 import { useRouter } from "next/router";
 
 const TheFellowshipOfTheRing = () => {
   const router = useRouter();
   const { slug } = router.query;
-  const { title, description, cover, books } = volumes.find(
-    (volume) => volume.slug === slug
-  );
+  const volume = volumes.find((volume) => volume.slug === slug);
+
+  if (!volume) {
+    return <p>Loading...</p>;
+  }
+
+  const { title, description, cover, books } = volume;
+
+  function getRandomVolume(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
+
+  function handleGetRandomVolume() {
+    let randomSlug;
+    do {
+      randomSlug = getRandomVolume(volumes).slug;
+    } while (randomSlug === slug);
+
+    router.push(`/volumes/${randomSlug}`);
+  }
 
   return (
     <>
@@ -26,6 +43,7 @@ const TheFellowshipOfTheRing = () => {
           );
         })}
       </ul>
+      <button onClick={handleGetRandomVolume}>Go to random volume</button>
     </>
   );
 };
