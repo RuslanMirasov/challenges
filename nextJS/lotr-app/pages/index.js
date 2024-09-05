@@ -1,7 +1,7 @@
-export default function HomePage() {
-  return (
-    <div>
-      <h1>Hello from Next.js</h1>
-    </div>
-  );
-}
+import Link from "next/link";
+
+const HomePage = () => {
+  return <Link href="/volumes">Volumes</Link>;
+};
+
+export default HomePage;
