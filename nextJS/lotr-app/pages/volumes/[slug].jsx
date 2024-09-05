@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { volumes } from "../../lib/data";
 import { useRouter } from "next/router";
+import { Preloader } from "@/components";
 
 const TheFellowshipOfTheRing = () => {
   const router = useRouter();
@@ -9,7 +10,7 @@ const TheFellowshipOfTheRing = () => {
   const volume = volumes.find((volume) => volume.slug === slug);
 
   if (!volume) {
-    return <p>Loading...</p>;
+    return <Preloader />;
   }
 
   const { title, description, cover, books } = volume;
