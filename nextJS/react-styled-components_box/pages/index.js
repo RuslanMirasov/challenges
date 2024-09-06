@@ -6,8 +6,6 @@ export default function HomePage() {
     <div>
       <BoxWithClassName />
       <BoxWithClassName isBlack />
-      <StyledBox />
-      <StyledBox $isBlack />
     </div>
   );
 }
