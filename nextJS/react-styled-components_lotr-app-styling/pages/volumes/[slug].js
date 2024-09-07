@@ -1,7 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { volumes } from "../../lib/data";
+import ArrowLink from "@/components/ArrowLink/ArrowLink";
+import PagePagination from "@/components/PagePagination/PagePagination";
+import BookSingle from "@/components/BookSingle/BookSingle";
 
 export default function VolumeDetail() {
   const router = useRouter();
@@ -17,40 +18,24 @@ export default function VolumeDetail() {
     return null;
   }
 
-  const { title, description, cover, books } = volume;
-
   return (
     <>
-      <Link href="/volumes">← All Volumes</Link>
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <ul>
-        {books.map(({ ordinal, title }) => (
-          <li key={title}>
-            {ordinal}: <strong>{title}</strong>
-          </li>
-        ))}
-      </ul>
-      <Image
-        src={cover}
-        alt={`Cover image of ${title}`}
-        width={140}
-        height={230}
-      />
-      {previousVolume ? (
-        <div>
-          <Link href={`/volumes/${previousVolume.slug}`}>
-            ← Previous Volume: {previousVolume.title}
-          </Link>
-        </div>
-      ) : null}
-      {nextVolume ? (
-        <div>
-          <Link href={`/volumes/${nextVolume.slug}`}>
-            Next Volume: {nextVolume.title} →
-          </Link>
-        </div>
-      ) : null}
+      <ArrowLink href="/volumes">All Volumes</ArrowLink>
+      <BookSingle volume={volume} />
+      <PagePagination>
+        {previousVolume ? (
+          <ArrowLink href={`/volumes/${previousVolume.slug}`} arrow="left">
+            <i>Previous Volume:</i>
+            <p>{previousVolume.title}</p>
+          </ArrowLink>
+        ) : null}
+        {nextVolume ? (
+          <ArrowLink href={`/volumes/${nextVolume.slug}`} arrow="right">
+            <i>Next Volume:</i>
+            <p>{nextVolume.title}</p>
+          </ArrowLink>
+        ) : null}
+      </PagePagination>
     </>
   );
 }
