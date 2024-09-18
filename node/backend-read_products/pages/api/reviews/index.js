@@ -1,10 +1,10 @@
 import dbConnect from "@/db/connect";
-import Product from "@/db/models/Product";
+import Review from "@/db/models/Review";
 
 export default async function handler(request, response) {
   await dbConnect();
   if (request.method === "GET") {
-    const products = await Product.find();
-    response.status(200).json(products);
+    const reviews = await Review.find();
+    response.status(200).json(reviews);
   }
 }
