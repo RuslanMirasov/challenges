@@ -1,12 +1,32 @@
+import { mutate } from "swr";
 import { StyledForm, StyledHeading, StyledLabel } from "./ProductForm.styled";
 import { StyledButton } from "../Button/Button.styled";
 
 export default function ProductForm() {
   async function handleSubmit(event) {
     event.preventDefault();
-
     const formData = new FormData(event.target);
     const productData = Object.fromEntries(formData);
+
+    try {
+      const response = await fetch("/api/products", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(productData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to create product");
+      }
+
+      mutate("/api/products");
+
+      event.target.reset();
+    } catch (error) {
+      console.error("Error creating product:", error);
+    }
   }
 
   return (
